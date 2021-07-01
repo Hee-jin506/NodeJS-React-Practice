@@ -1,0 +1,29 @@
+{
+  "name": "nodejs-react-practice",
+  "version": "1.0.0",
+  "description": "노드 리액트 기초 강의를 따라해보는 연습 프로젝트",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "backend": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hee-jin506/nodejs-react-practice.git"
+  },
+  "author": "heejin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hee-jin506/nodejs-react-practice/issues"
+  },
+  "homepage": "https://github.com/Hee-jin506/nodejs-react-practice#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.15"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.8"
+  }
+}
