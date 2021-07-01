@@ -1,2 +1,2 @@
-# nodejs-react-practice
-노드 리액트 기초 강의를 따라해보는 연습 프로젝트
+# SimLiTest-NodeJS
+심리테스트 웹 토이프로젝트입니다
