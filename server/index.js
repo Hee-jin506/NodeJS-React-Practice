@@ -1,11 +1,22 @@
 const express = require('express');
-const app = express();
-const port = 3000;
+const morgan = require('morgan');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const dotenv = require('dotenv');
+const path = require('path');
 const bodyParser = require('body-parser');
 const { User } = require("./models/User");
 const config = require('./config/key');
+
+const app = express();
+app.set('port', process.env.PORT || 3000);
+
+app.use(morgan('dev'));
+app.use('/', express.static(path.join(__dirname, 'public')));
+app.use(express.json());
+app.use(express.url)
 //application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 //application/json
 app.use(bodyParser.json());
@@ -50,6 +61,6 @@ app.post('/login', (req, res) => {
   })
 })
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+app.listen(app.get('port'), () => {
+  console.log(`Example app listening at http://localhost:${app.get('port')}`)
 })
